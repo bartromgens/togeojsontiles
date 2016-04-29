@@ -42,7 +42,7 @@ class TestToGeoJsonTiles(unittest.TestCase):
     def mbtiles_to_geojsontiles(self):
         togeojsontiles.mbtiles_to_geojsontiles(self.tippecanoe_dir, self.tiles_dir, self.mbtiles_file)
         self.assertTrue(os.path.exists(self.mbtiles_file))
-        tile_file = os.path.join(self.tiles_dir, '14/8426/5393.json')
+        tile_file = os.path.join(self.tiles_dir, '14/8426/5393.geojson')
         self.assertTrue(os.path.exists(tile_file))
         os.remove(tile_file)
 
