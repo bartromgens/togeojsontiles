@@ -39,7 +39,7 @@ def mbtiles_to_geojsontiles(tippecanoe_dir, tile_dir, mbtiles_file='out.mbtiles'
             for word in words:
                 args.append(word)
             output = subprocess.check_output(args)
-            filename = os.path.join(tile_dir, words[1] + '/' + words[2] + '/' + words[3] + '.json')
+            filename = os.path.join(tile_dir, words[1] + '/' + words[2] + '/' + words[3] + '.geojson')
             mkdir_p(os.path.dirname(filename))
             with open(filename, 'w') as fileout:
                 fileout.write(output.decode('utf-8'))
