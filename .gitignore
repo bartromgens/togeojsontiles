@@ -1,9 +1,12 @@
+*.pyc
+
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
+
 .idea
 data/
 lib/
 env/
-
-tilelist.txt
-out.mbtiles
-
-*.pyc
