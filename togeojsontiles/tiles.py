@@ -17,7 +17,6 @@ def gpx_to_geojson(file_gpx, file_geojson):
 
 
 def geojson_to_mbtiles(filepaths, tippecanoe_dir, mbtiles_file='out.mbtiles', maxzoom=12):
-    # filepaths.append('boundingbox.geojson')
     args = [os.path.join(tippecanoe_dir, 'tippecanoe'), '-f', '-o', mbtiles_file, '-z', str(int(maxzoom))]
     for filepath in filepaths:
         args.append(filepath)
