@@ -12,7 +12,7 @@ The generated tiles can be shown on interactive slippy map like [OpenLayers](htt
 togeojsontiles is compatible with Python 3.3, 3.4, 3.5. It is listed on PyPi as 'togeojsonfiles'.  
 The recommended way to install is via pip,
 ```
-$ pip install togeojson
+$ pip install togeojsontiles
 ```
 
 ## Dependencies 
