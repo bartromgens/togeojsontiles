@@ -4,6 +4,7 @@ setup(
     name='togeojsontiles',
     version='0.1',
     description='Create geojson-tiles from gpx or geojson using tippecanoe (C++) and togeojson (javascript)',
+    keywords='gis geojson tippecanoe tiles map-tiles mbtiles gpx',
     url='http://github.com/bartromgens/togeojsontiles',
     author='Bart Römgens',
     author_email='bart.romgens@gmail.com',
