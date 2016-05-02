@@ -1,9 +1,17 @@
 from setuptools import setup
 
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except(IOError, ImportError):
+    long_description = open('README.md').read()
+
+
 setup(
     name='togeojsontiles',
     version='0.1',
     description='Create geojson-tiles from gpx or geojson using tippecanoe (C++) and togeojson (javascript)',
+    long_description=long_description,
     keywords='gis geojson tippecanoe tiles map-tiles mbtiles gpx',
     url='http://github.com/bartromgens/togeojsontiles',
     author='Bart Römgens',
