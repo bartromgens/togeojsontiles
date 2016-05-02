@@ -9,7 +9,7 @@ except(IOError, ImportError):
 
 setup(
     name='togeojsontiles',
-    version='0.1',
+    version='0.1.0',
     description='Create geojson-tiles from gpx or geojson using tippecanoe (C++) and togeojson (javascript)',
     long_description=long_description,
     keywords='gis geojson tippecanoe tiles map-tiles mbtiles gpx',
