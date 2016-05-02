@@ -1,4 +1,5 @@
 # togeojsontiles
+[![PyPI version](https://badge.fury.io/py/togeojsontiles.svg)](https://badge.fury.io/py/togeojsontiles)  
 Create geojson-tiles from gpx, mbtiles or geojson files.
 
 togeojsontiles is a Python 3 package with bindings for [tippecanoe](https://github.com/mapbox/tippecanoe) (C++) and [togeojson](https://github.com/mapbox/togeojson) (javascript) 
