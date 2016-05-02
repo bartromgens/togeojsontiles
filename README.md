@@ -17,9 +17,11 @@ $ pip install togeojson
 
 ## Dependencies 
 This package provides Python bindings for tippecanoe (C++) to create the tiles, and togeojson (javascript) to convert gpx to geojson.
-These libraries do all the work and are required. 
+These libraries do all the work and are required.
+
 ##### tippecanoe
-See [tippecanoe](https://github.com/mapbox/tippecanoe) for installation instructions. It has a few system level dependencies, but is rather easy to build. 
+See [tippecanoe](https://github.com/mapbox/tippecanoe) for installation instructions. It has a few system level dependencies, but is rather easy to build.
+
 ##### togoejson
 To install togoejson (javascript) in your path,
 ```
