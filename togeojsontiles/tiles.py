@@ -32,8 +32,8 @@ def mbtiles_to_geojsontiles(tippecanoe_dir, tile_dir, mbtiles_file='out.mbtiles'
         fileout.write(output.decode('utf-8'))
     with open(tilelistfile, 'r') as filein:
         for line in filein:
-            line = line.rstrip()  # line has format 'data/test/out.mbtiles 14 8423 5390'
-            args = ["lib/tippecanoe-decode"]
+            line = line.rstrip()  # line has format '<path>/out.mbtiles 14 8423 5390'
+            args = [os.path.join(tippecanoe_dir, 'tippecanoe-decode')]
             words = line.split()
             for word in words:
                 args.append(word)
