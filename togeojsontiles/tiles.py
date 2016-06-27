@@ -16,8 +16,34 @@ def gpx_to_geojson(file_gpx, file_geojson):
         print(file_geojson + ' created!')
 
 
-def geojson_to_mbtiles(filepaths, tippecanoe_dir, mbtiles_file='out.mbtiles', maxzoom=12):
-    args = [os.path.join(tippecanoe_dir, 'tippecanoe'), '-f', '-o', mbtiles_file, '-z', str(int(maxzoom))]
+def geojson_to_mbtiles(
+        filepaths,
+        tippecanoe_dir,
+        mbtiles_file='out.mbtiles',
+        maxzoom=14,  # Maxzoom: the highest zoom level for which tiles are generated
+        minzoom=0,  # Minzoom: the lowest zoom level for which tiles are generated
+        full_detail=12,  # Detail at max zoom level
+        lower_detail=12,  # Detail at lower zoom levels
+        min_detail=7,  # Minimum detail that it will try if tiles are too big at regular detail
+        extra_args=()
+    ):
+    args = [
+        os.path.join(tippecanoe_dir, 'tippecanoe'),
+        # '-B', str(base_zoom),  # Base zoom, the level at and above which all points are included in the tiles
+        '-d', str(full_detail),  # Detail at max zoom level
+        '-D', str(lower_detail),  # Detail at lower zoom levels
+        '-m', str(min_detail),  # Minimum detail that it will try if tiles are too big at regular detail
+        '-f', # Delete the mbtiles file if it already exists instead of giving an error
+        # '-al',
+        # '-g', str(1000),
+        # '-r', str(5),
+        '-o', mbtiles_file,
+        '-z', str(int(maxzoom)),
+        '-Z', str(int(minzoom))
+    ]
+    for arg in extra_args:
+        args.append(arg)
+
     for filepath in filepaths:
         args.append(filepath)
     output = subprocess.check_output(args)
