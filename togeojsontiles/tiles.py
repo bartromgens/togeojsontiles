@@ -25,7 +25,7 @@ def geojson_to_mbtiles(
         full_detail=12,  # Detail at max zoom level
         lower_detail=12,  # Detail at lower zoom levels
         min_detail=7,  # Minimum detail that it will try if tiles are too big at regular detail
-        extra_args=()
+        extra_args=[]
     ):
     args = [
         os.path.join(tippecanoe_dir, 'tippecanoe'),
